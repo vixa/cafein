@@ -5,6 +5,7 @@
  */
 package fr.bsenac.cafein_bot;
 
+import java.io.FileNotFoundException;
 import net.dv8tion.jda.core.JDA;
 import net.dv8tion.jda.core.entities.Game;
 
@@ -13,7 +14,7 @@ import net.dv8tion.jda.core.entities.Game;
  * @author vixa
  */
 class Initialisation {
-    static void ini(JDA discord){
+    static void ini(JDA discord) throws FileNotFoundException{
         Category.iniCategoryList();
         Human.iniHumanList();
         discord.addEventListener(new MessageSender());

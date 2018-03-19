@@ -5,6 +5,7 @@
  */
 package fr.bsenac.cafein_bot;
 
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.TreeMap;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
@@ -56,7 +57,7 @@ abstract class Category {
         }
     }
     
-    protected static void iniCategoryList(){
+    protected static void iniCategoryList() throws FileNotFoundException{
         categoryList = new CategoryList();
     }
 
