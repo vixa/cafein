@@ -5,6 +5,7 @@
  */
 package fr.bsenac.cafein_bot;
 
+import java.io.FileNotFoundException;
 import java.util.TreeMap;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 
@@ -17,7 +18,7 @@ class CategoryList extends TreeMap<String, Category> {
     /**
      * Default constructor, build all commands in the map
      */
-    public CategoryList() {
+    public CategoryList() throws FileNotFoundException {
         super();
         this.addCategory(new Category_defaut(), "defaut");
         this.addCategory(new Category_MenuJDR(), "menujdr");
